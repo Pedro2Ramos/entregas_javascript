@@ -7,40 +7,115 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
   <link rel="stylesheet" href="styles.css"> 
+  <style>
+    body {
+      background-color: #fff; 
+      color: #000; 
+      transition: background-color 0.3s, color 0.3s; 
+    }
+    body.dark-mode {
+      background-color: #333; 
+      color: #fff; 
+    }
+  </style>
 </head>
 <body>
-
-  <!-- Barra de navegación -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand" href="#">Tu Tienda Online</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="Checkdarkmode2">
+        <label class="form-check-label" for="Checkdarkmode">Modo Oscuro</label>
+      </div>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" id="salir" href="#">Cerrar Sesión</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Productos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Carrito</a>
+            <a class="nav-link" href="#" id="ver-carrito">Carrito</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-
   <div class="container mt-4">
     <h1 class="text-center mb-4">Bienvenido a Tu Tienda Online</h1>
     <div class="row" id="productos">
+      <!-- Producto 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="Imagenes/Producto 1.jpg" class="card-img-top" alt="Skateboard Element">
+          <div class="card-body">
+            <h5 class="card-title">Skateboard Element</h5>
+            <p class="card-text">Precio: $100000</p>
+            <button class="btn btn-primary agregar-carrito" data-id="1">Agregar al Carrito</button>
+          </div>
+        </div>
+      </div>
+      <!-- Producto 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="Imagenes/Producto 2.jpg" class="card-img-top" alt="Skateboard Santa Cruz">
+          <div class="card-body">
+            <h5 class="card-title">Skateboard Santa Cruz</h5>
+            <p class="card-text">Precio: $50000</p>
+            <button class="btn btn-primary agregar-carrito" data-id="2">Agregar al Carrito</button>
+          </div>
+        </div>
+      </div>
+      <!-- Producto 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="Imagenes/Producto 3.jpg" class="card-img-top" alt="Skateboard Plan B">
+          <div class="card-body">
+            <h5 class="card-title">Skateboard Plan B</h5>
+            <p class="card-text">Precio: $70000</p>
+            <button class="btn btn-primary agregar-carrito" data-id="3">Agregar al Carrito</button>
+          </div>
+        </div>
+      </div>
+      <!-- Producto 4 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="Imagenes/Producto 4.jpg" class="card-img-top" alt="Skateboard Chocolate">
+          <div class="card-body">
+            <h5 class="card-title">Skateboard Chocolate</h5>
+            <p class="card-text">Precio: $80000</p>
+            <button class="btn btn-primary agregar-carrito" data-id="4">Agregar al Carrito</button>
+          </div>
+        </div>
+      </div>
+      <!-- Producto 5 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="Imagenes/Producto 5.jpg" class="card-img-top" alt="Skateboard Pro">
+          <div class="card-body">
+            <h5 class="card-title">Skateboard Pro</h5>
+            <p class="card-text">Precio: $15000</p>
+            <button class="btn btn-primary agregar-carrito" data-id="5">Agregar al Carrito</button>
+          </div>
+        </div>
+      </div>
+      <!-- Producto 6 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="Imagenes/Producto 6.jpg" class="card-img-top" alt="Skateboard Creature">
+          <div class="card-body">
+            <h5 class="card-title">Skateboard Creature</h5>
+            <p class="card-text">Precio: $25000</p>
+            <button class="btn btn-primary agregar-carrito" data-id="6">Agregar al Carrito</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  
+  <script src="JS/main.js"></script>
+  <script src="https://js.stripe.com/v3/"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="main.js"></script>
 </body>
 </html>
